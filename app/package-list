@@ -1,0 +1,58 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.htueko.simpletodo.common.data.local////PointingToDeclaration/app/com.htueko.simpletodo.common.data.local/index.html
+$dokka.location:com.htueko.simpletodo.common.data.local/LocalConstant///PointingToDeclaration/app/com.htueko.simpletodo.common.data.local/-local-constant/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference////PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference//dataStore/android.content.Context#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/data-store.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferences///PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferences/isLoggedIn/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences/is-logged-in.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferences/setLoggedIn/#kotlin.Boolean/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences/set-logged-in.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl.PreferencesKey///PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/-preferences-key/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl.PreferencesKey/KEY_LOGGED_IN/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/-preferences-key/-k-e-y_-l-o-g-g-e-d_-i-n.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl///PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl/AppPreferencesImpl/#android.content.Context/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/-app-preferences-impl.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl/dataStore/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/data-store.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl/isLoggedIn/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/is-logged-in.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/AppPreferencesImpl/setLoggedIn/#kotlin.Boolean/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-app-preferences-impl/set-logged-in.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/PreferenceConstant///PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-preference-constant/index.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/PreferenceConstant/KEY_IS_LOGIN/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-preference-constant/-k-e-y_-i-s_-l-o-g-i-n.html
+$dokka.location:com.htueko.simpletodo.common.data.preference/PreferenceConstant/NAME_USER_PREFERENCES/#/PointingToDeclaration/app/com.htueko.simpletodo.common.data.preference/-preference-constant/-n-a-m-e_-u-s-e-r_-p-r-e-f-e-r-e-n-c-e-s.html
+$dokka.location:com.htueko.simpletodo.common.data.remote////PointingToDeclaration/app/com.htueko.simpletodo.common.data.remote/index.html
+$dokka.location:com.htueko.simpletodo.common.data.remote/RemoteConstant///PointingToDeclaration/app/com.htueko.simpletodo.common.data.remote/-remote-constant/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.exception////PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.exception/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.exception/NetworkUnavailableException///PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.exception/-network-unavailable-exception/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.exception/NetworkUnavailableException/NetworkUnavailableException/#kotlin.String/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.exception/-network-unavailable-exception/-network-unavailable-exception.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo////PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo///PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/Todo/#kotlin.Long#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlinx.datetime.LocalDateTime#kotlinx.datetime.LocalDateTime/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/-todo.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/createAt/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/create-at.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/desc/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/desc.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/id/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/id.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/isImportant/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/is-important.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/isUrgent/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/is-urgent.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/title/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/title.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.todo/Todo/updateAt/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.todo/-todo/update-at.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user////PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User///PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/User/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.collections.List[com.htueko.simpletodo.common.domain.model.todo.Todo]/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/-user.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/address/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/address.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/email/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/email.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/id/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/id.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/imageUrl/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/image-url.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/name/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/name.html
+$dokka.location:com.htueko.simpletodo.common.domain.model.user/User/todos/#/PointingToDeclaration/app/com.htueko.simpletodo.common.domain.model.user/-user/todos.html
+$dokka.location:com.htueko.simpletodo.common.domain.repository////PointingToDeclaration/app/com.htueko.simpletodo.common.domain.repository/index.html
+$dokka.location:com.htueko.simpletodo.common.domain.repository/TodoRepository///PointingToDeclaration/app/com.htueko.simpletodo.common.domain.repository/-todo-repository/index.html
+$dokka.location:com.htueko.simpletodo////PointingToDeclaration/app/com.htueko.simpletodo/index.html
+$dokka.location:com.htueko.simpletodo/MainActivity///PointingToDeclaration/app/com.htueko.simpletodo/-main-activity/index.html
+$dokka.location:com.htueko.simpletodo/MainActivity/MainActivity/#/PointingToDeclaration/app/com.htueko.simpletodo/-main-activity/-main-activity.html
+$dokka.location:com.htueko.simpletodo/MainActivity/onCreate/#android.os.Bundle?/PointingToDeclaration/app/com.htueko.simpletodo/-main-activity/on-create.html
+com.htueko.simpletodo
+com.htueko.simpletodo.common.data.local
+com.htueko.simpletodo.common.data.preference
+com.htueko.simpletodo.common.data.remote
+com.htueko.simpletodo.common.domain.model.exception
+com.htueko.simpletodo.common.domain.model.todo
+com.htueko.simpletodo.common.domain.model.user
+com.htueko.simpletodo.common.domain.repository
+
