@@ -110,6 +110,10 @@ dependencies {
     implementation "com.google.firebase:firebase-firestore-ktx:$versions.firebaseCloudFirestoreVersion"
     implementation "com.google.firebase:firebase-storage-ktx:$versions.firebaseCloudStorageVersion"
 
+    // Date Time
+    implementation "org.jetbrains.kotlinx:kotlinx-datetime:$versions.kotlinxDateTimeVersion"
+    implementation "com.jakewharton.threetenabp:threetenabp:$versions.threetenabpVersion"
+
     // unit test
     testImplementation "junit:junit:$versions.junitVersion"
     testImplementation "androidx.test:core:$versions.androidxTest"
