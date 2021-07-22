@@ -1,8 +1,8 @@
-package com.htueko.simpletodo.common.domain.model.todo
+package com.htueko.simpletodo.common.data.remote.model
 
 import kotlinx.datetime.LocalDateTime
 
-data class Todo(
+class RemoteTodoModel(
     val id: Long,
     val title: String,
     val desc: String?,

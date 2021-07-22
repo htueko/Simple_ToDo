@@ -6,6 +6,7 @@ data class User(
     val id: String,
     val name: String,
     val email: String,
+    val password: String,
     val address: String,
     val imageUrl: String,
     val todos: List<Todo>
