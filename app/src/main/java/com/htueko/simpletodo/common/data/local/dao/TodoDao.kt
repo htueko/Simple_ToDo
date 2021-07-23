@@ -25,6 +25,6 @@ interface TodoDao {
     fun getTodos(): Flow<List<TodoEntity>>
 
     @Query("select * from todo_table where id = :todoId")
-    fun getTodoById(todoId: Long): Flow<List<TodoEntity>>
+    fun getTodoById(todoId: Long): Flow<TodoEntity>
 
 }

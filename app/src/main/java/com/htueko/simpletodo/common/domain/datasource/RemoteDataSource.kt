@@ -1,5 +1,6 @@
 package com.htueko.simpletodo.common.domain.datasource
 
+import com.htueko.simpletodo.common.data.datasource.RemoteDataSourceImpl
 import com.htueko.simpletodo.common.domain.model.todo.Todo
 import kotlinx.coroutines.flow.Flow
 
@@ -9,7 +10,8 @@ import kotlinx.coroutines.flow.Flow
  */
 interface RemoteDataSource {
     fun getTodo(): Flow<List<Todo>>
-    fun addToDo(todo: Todo)
-    fun removeToDo(todo: Todo)
-    fun updateToDo(todo: Todo)
+    fun getTodoById(id: Long): Flow<Todo>
+    suspend fun addToDo(todo: Todo)
+    suspend fun removeToDo(todo: Todo)
+    suspend fun updateToDo(todo: Todo)
 }

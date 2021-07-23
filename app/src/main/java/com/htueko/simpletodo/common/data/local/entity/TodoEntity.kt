@@ -3,6 +3,7 @@ package com.htueko.simpletodo.common.data.local.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.htueko.simpletodo.common.data.local.LocalConstant
+import com.htueko.simpletodo.common.domain.model.todo.Todo
 import kotlinx.datetime.LocalDateTime
 
 
@@ -17,4 +18,32 @@ data class TodoEntity(
     val isUrgent: Boolean = false,
     val createAt: LocalDateTime,
     val updateAt: LocalDateTime
-)
+) {
+    companion object {
+        fun fromDomain(todo: Todo): TodoEntity {
+            return TodoEntity(
+                id = todo.id,
+                title = todo.title,
+                desc = todo.desc,
+                hasComplete = todo.hasComplete,
+                isImportant = todo.isImportant,
+                isUrgent = todo.isUrgent,
+                createAt = todo.createAt,
+                updateAt = todo.updateAt
+            )
+        }
+
+        fun toDomain(todoEntity: TodoEntity): Todo {
+            return Todo(
+                id = todoEntity.id,
+                title = todoEntity.title,
+                desc = todoEntity.desc,
+                hasComplete = todoEntity.hasComplete,
+                isImportant = todoEntity.isImportant,
+                isUrgent = todoEntity.isUrgent,
+                createAt = todoEntity.createAt,
+                updateAt = todoEntity.updateAt
+            )
+        }
+    }
+}
