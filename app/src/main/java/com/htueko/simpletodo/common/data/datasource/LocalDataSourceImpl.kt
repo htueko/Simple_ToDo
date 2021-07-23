@@ -2,7 +2,7 @@ package com.htueko.simpletodo.common.data.datasource
 
 import com.htueko.simpletodo.common.data.local.dao.TodoDao
 import com.htueko.simpletodo.common.data.local.entity.TodoEntity
-import com.htueko.simpletodo.common.domain.datasource.RemoteDataSource
+import com.htueko.simpletodo.common.domain.datasource.LocalDataSource
 import com.htueko.simpletodo.common.domain.executor.AppExecutor
 import com.htueko.simpletodo.common.domain.model.todo.Todo
 import javax.inject.Inject
@@ -14,10 +14,10 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
-class RemoteDataSourceImpl @Inject constructor(
+class LocalDataSourceImpl @Inject constructor(
     private val taskExecutor: AppExecutor,
     private val todoDao: TodoDao
-) : RemoteDataSource {
+) : LocalDataSource {
 
     private val backGroundTask = taskExecutor.io
 
