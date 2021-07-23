@@ -8,6 +8,7 @@ import com.htueko.simpletodo.common.domain.model.todo.Todo
 import javax.inject.Inject
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -24,6 +25,7 @@ class LocalDataSourceImpl @Inject constructor(
     @FlowPreview
     override fun getTodo(): Flow<List<Todo>> =
         todoDao.getTodos()
+            .distinctUntilChanged()
             .flowOn(backGroundTask)
             .flatMapConcat { list ->
                 val todoList: MutableList<Todo> = mutableListOf()
@@ -38,6 +40,7 @@ class LocalDataSourceImpl @Inject constructor(
 
     override fun getTodoById(id: Long): Flow<Todo> =
         todoDao.getTodoById(id)
+            .distinctUntilChanged()
             .flowOn(backGroundTask)
             .map { TodoEntity.toDomain(it) }
 

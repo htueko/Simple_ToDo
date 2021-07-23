@@ -5,7 +5,7 @@ import com.htueko.simpletodo.common.domain.model.todo.Todo
 import kotlinx.coroutines.flow.Flow
 
 /**
- * Contract to implement for Remote DataSource
+ * Contract to implement for local database / cache
  * @see [LocalDataSourceImpl]
  */
 interface LocalDataSource {
