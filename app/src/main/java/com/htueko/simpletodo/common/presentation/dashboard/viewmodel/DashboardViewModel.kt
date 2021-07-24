@@ -6,12 +6,14 @@ import com.htueko.simpletodo.common.domain.model.todo.Todo
 import com.htueko.simpletodo.common.domain.usecase.DeleteTodoUseCase
 import com.htueko.simpletodo.common.domain.usecase.GetTodosUseCase
 import com.htueko.simpletodo.common.util.State
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
+@HiltViewModel
 class DashboardViewModel @Inject constructor(
     private val getTodosUseCase: GetTodosUseCase,
     private val deleteTodoUseCase: DeleteTodoUseCase

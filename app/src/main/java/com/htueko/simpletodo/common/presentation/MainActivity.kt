@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.google.firebase.FirebaseApp
 import com.htueko.simpletodo.R
 import com.htueko.simpletodo.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint

@@ -130,3 +130,5 @@ dependencies {
     androidTestImplementation "androidx.work:work-testing:$versions.workManagerVersion"
 
 }
+
+apply plugin: 'com.google.gms.google-services'
