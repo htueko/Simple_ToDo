@@ -7,19 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".common.presentation.dashboard.ui.DashboardFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/root_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_dashboard" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -27,18 +39,22 @@
         android:id="@+id/progress_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <TextView
-        android:text="Nothing to show"
         android:id="@+id/tv_no_data_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Nothing to show"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@id/progress_dashboard"
         app:layout_constraintStart_toStartOf="@id/progress_dashboard"
-        app:layout_constraintTop_toBottomOf="@id/progress_dashboard" />
+        app:layout_constraintTop_toBottomOf="@id/progress_dashboard"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

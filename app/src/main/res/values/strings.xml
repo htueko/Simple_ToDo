@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Simple ToDo</string>
+
+    <string name="placeholder_title">This is title</string>
+    <string name="placeholder_desc">This is description</string>
+    <string name="text_important">Important</string>
+    <string name="text_urgent">Urgent</string>
+    <string name="text_completed">Completed</string>
+    <string name="text_delete">Delete</string>
+
 </resources>

@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.htueko.simpletodo.R
 import com.htueko.simpletodo.common.presentation.base.BaseFragment
 import com.htueko.simpletodo.common.presentation.dashboard.viewmodel.DashboardViewModel
 import com.htueko.simpletodo.common.util.State
@@ -28,7 +30,9 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding, DashboardViewMo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
+        viewModel.getTodos()
         observeData()
+        toDetail()
     }
 
     private fun setupUI() {
@@ -37,7 +41,6 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding, DashboardViewMo
 
     private fun observeData() {
         lifecycleScope.launch {
-            viewModel.getTodos()
             viewModel.todos
                 .collect { state ->
                     when (state) {
@@ -52,6 +55,9 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding, DashboardViewMo
                         is State.Success -> {
                             showProgress(false)
                             showError(null, false)
+                            if (state.data.isEmpty()){
+                                showNoData(true)
+                            }
                         }
                     }
                 }
@@ -70,9 +76,17 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding, DashboardViewMo
         }
     }
 
+    private fun showNoData(value: Boolean){
+        if (value){
+            binding.tvNoDataDashboard.visibility = View.VISIBLE
+        }else {
+            binding.tvNoDataDashboard.visibility = View.GONE
+        }
+    }
+
     private fun toDetail() {
         binding.fabDashboard.setOnClickListener {
-
+            findNavController().navigate(R.id.action_dashboardFragment_to_detailFragment)
         }
     }
 
