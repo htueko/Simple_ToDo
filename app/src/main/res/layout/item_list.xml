@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_title_list" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/imv_completed_list"
+                android:id="@+id/chk_complete_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/text_important"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
-                app:layout_constraintTop_toBottomOf="@+id/imv_completed_list"
+                app:layout_constraintTop_toBottomOf="@+id/chk_complete_list"
                 app:shapeAppearance="@style/roundedImageViewRounded" />
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -94,7 +94,7 @@
                 android:layout_marginEnd="8dp"
                 android:contentDescription="@string/text_urgent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imv_completed_list" />
+                app:layout_constraintTop_toBottomOf="@+id/chk_complete_list" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

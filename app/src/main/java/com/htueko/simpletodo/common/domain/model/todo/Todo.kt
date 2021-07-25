@@ -1,5 +1,7 @@
 package com.htueko.simpletodo.common.domain.model.todo
 
+import android.os.Parcel
+import android.os.Parcelable
 import kotlinx.datetime.LocalDateTime
 
 data class Todo(
