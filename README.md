@@ -1,6 +1,7 @@
 <h1 align="center">Simple Todo</h1></br>
 
 <p align="center"> A demo app using spotless, dependencyUpdate, dokka and github action </p>
+<p align="center"> APP IS STILL UNDER DEVELOPMENT</p>
 
 <p align="center">
   <a href="https://github.com/htueko"><img alt="Htue Ko" src="https://img.shields.io/badge/Github-Profile-green?style=flat&logo=appveyor"/></a>
