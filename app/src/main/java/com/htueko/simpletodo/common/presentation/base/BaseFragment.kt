@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
+import timber.log.Timber
 
 abstract class BaseFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
 
@@ -20,11 +21,13 @@ abstract class BaseFragment<VB : ViewBinding, VM : ViewModel> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = getViewBinding(inflater, container)
+        Timber.d("onCreateView: called")
         return binding.root
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        Timber.d("onDestroy: called")
         _binding = null
     }
 

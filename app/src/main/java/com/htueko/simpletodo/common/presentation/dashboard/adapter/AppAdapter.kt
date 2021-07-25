@@ -14,7 +14,8 @@ import com.htueko.simpletodo.databinding.ItemListBinding
 
 class AppAdapter(
     private val layoutManager: GridLayoutManager? = null,
-    private val onChangeListener: (Todo) -> Unit
+    private val onChangeListener: (Todo) -> Unit,
+    private val onDeleteItemClickListener: (Todo) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     enum class ViewType {
@@ -30,7 +31,6 @@ class AppAdapter(
         override fun areContentsTheSame(oldItem: Todo, newItem: Todo): Boolean {
             return oldItem == newItem
         }
-
     }
 
     private val differ = AsyncListDiffer(this, diffCallBack)
@@ -53,12 +53,12 @@ class AppAdapter(
             ViewType.List.ordinal -> {
                 val binding =
                     ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                ListViewHolder(binding, onChangeListener)
+                ListViewHolder(binding, onChangeListener, onDeleteItemClickListener)
             }
             else -> {
                 val binding =
                     ItemGridBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                GridViewHolder(binding, onChangeListener)
+                GridViewHolder(binding, onChangeListener, onDeleteItemClickListener)
             }
         }
     }
@@ -74,6 +74,4 @@ class AppAdapter(
             }
         }
     }
-
-
 }

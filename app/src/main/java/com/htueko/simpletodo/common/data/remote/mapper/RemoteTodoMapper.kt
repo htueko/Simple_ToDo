@@ -19,5 +19,4 @@ class RemoteTodoMapper @Inject constructor() : RemoteMapper<RemoteTodoModel, Tod
             updateAt = remoteEntity.updateAt
         )
     }
-
 }

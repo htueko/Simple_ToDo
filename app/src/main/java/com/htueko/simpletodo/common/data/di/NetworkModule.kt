@@ -11,8 +11,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 internal object NetworkModule {
 
+    // to provide Firestore Instance
     @Provides
     @Singleton
     fun provideFirestore() = FirebaseFirestore.getInstance()
-
 }

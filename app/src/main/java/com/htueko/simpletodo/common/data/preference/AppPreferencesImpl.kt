@@ -6,23 +6,22 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
-import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
-import java.io.IOException
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
+import java.io.IOException
+import javax.inject.Inject
 
 /**
  * extension function [Context] to get [DataStore]
  * @see <a href="https://developer.android.com/topic/libraries/architecture/datastore#kotlin">DataStore Android Doc</a>
  */
 private val Context.dataStore: DataStore<Preferences>
-        by preferencesDataStore(
-            name = PreferenceConstant.NAME_USER_PREFERENCES
-        )
+by preferencesDataStore(
+    name = PreferenceConstant.NAME_USER_PREFERENCES
+)
 
 /**
  * to store user data in preferences
@@ -31,7 +30,7 @@ private val Context.dataStore: DataStore<Preferences>
  */
 class AppPreferencesImpl @Inject constructor(
     @ApplicationContext context: Context
-) : AppPreferences{
+) : AppPreferences {
 
     // get the DataStore object to store user data
     private val dataStore = context.dataStore
@@ -60,5 +59,4 @@ class AppPreferencesImpl @Inject constructor(
             preferences[PreferencesKey.KEY_LOGGED_IN] = value
         }
     }
-
 }

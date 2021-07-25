@@ -20,24 +20,28 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 abstract class UseCaseModule {
 
+    // to provide add use case
     @Binds
     @Singleton
     abstract fun provideAddTodoUseCase(addTodoUseCaseImpl: AddTodoUseCaseImpl): AddTodoUseCase
 
+    // to provide delete use case
     @Binds
     @Singleton
     abstract fun provideDeleteTodoUseCase(deleteTodoUseCaseImpl: DeleteTodoUseCaseImpl): DeleteTodoUseCase
 
+    // to provide get by id use case
     @Binds
     @Singleton
     abstract fun provideGetTodoByIdUseCase(getTodoByIdUseCaseImpl: GetTodoByIdUseCaseImpl): GetTodoByIdUseCase
 
+    // to provide get all data use case
     @Binds
     @Singleton
     abstract fun provideGetTodosUseCase(getTodosUseCaseImpl: GetTodosUseCaseImpl): GetTodosUseCase
 
+    // to provide update the data use case
     @Binds
     @Singleton
     abstract fun provideUpdateTodoUseCase(updateTodoUseCaseImpl: UpdateTodoUseCaseImpl): UpdateTodoUseCase
-
 }

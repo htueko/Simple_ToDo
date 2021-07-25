@@ -1,12 +1,10 @@
 package com.htueko.simpletodo.common.util
 
 import com.orhanobut.logger.AndroidLogAdapter
-
 import com.orhanobut.logger.FormatStrategy
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import timber.log.Timber
-
 
 object Logger {
 
@@ -45,5 +43,4 @@ object Logger {
             .build()
         Logger.addLogAdapter(AndroidLogAdapter(formatStrategy))
     }
-
 }

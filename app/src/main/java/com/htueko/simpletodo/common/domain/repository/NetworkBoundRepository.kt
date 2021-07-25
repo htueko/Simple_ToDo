@@ -52,11 +52,9 @@ abstract class NetworkBoundResource<Local, Remote> {
                 State.success<Local>(it)
             }
         )
-
     }.catch { error ->
         // Exception occurred! Emit error
         emit(State.error("Network error!"))
         error.printStackTrace()
     }
-
 }

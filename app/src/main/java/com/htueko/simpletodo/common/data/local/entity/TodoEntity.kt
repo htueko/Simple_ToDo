@@ -5,8 +5,13 @@ import androidx.room.PrimaryKey
 import com.htueko.simpletodo.common.data.local.LocalConstant
 import com.htueko.simpletodo.common.domain.model.todo.Todo
 import kotlinx.datetime.LocalDateTime
+import timber.log.Timber
 
-
+/**
+ * model class to store data in local database
+ * @see [Entity]
+ * @see [LocalConstant]
+ */
 @Entity(tableName = LocalConstant.TABLE_TODO)
 data class TodoEntity(
     @PrimaryKey(autoGenerate = false)
@@ -21,6 +26,7 @@ data class TodoEntity(
 ) {
     companion object {
         fun fromDomain(todo: Todo): TodoEntity {
+            Timber.d("fromDomain: called with data: $todo")
             return TodoEntity(
                 id = todo.id,
                 title = todo.title,
@@ -34,6 +40,7 @@ data class TodoEntity(
         }
 
         fun toDomain(todoEntity: TodoEntity): Todo {
+            Timber.d("toDomain: called with data: $todoEntity")
             return Todo(
                 id = todoEntity.id,
                 title = todoEntity.title,

@@ -1,5 +1,8 @@
 package com.htueko.simpletodo.common.data.local
 
+/**
+ * constant value for local database operation
+ */
 object LocalConstant {
     // table name
     const val TABLE_TODO = "todo_table"

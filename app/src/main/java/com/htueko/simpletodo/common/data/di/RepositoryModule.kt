@@ -37,5 +37,4 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun provideTaskExecutor(appExecutorImpl: AppExecutorImpl): AppExecutor
-
 }

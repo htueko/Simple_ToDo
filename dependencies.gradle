@@ -60,6 +60,7 @@ ext.versions = [
         // date time
         threetenabpVersion           : '1.2.4',
         kotlinxDateTimeVersion       : '0.2.1',
+        fluidTimeVersion             : '0.14.0',
 
         // test
         truthVersion                 : '1.1.3',

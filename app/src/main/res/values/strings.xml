@@ -7,5 +7,13 @@
     <string name="text_urgent">Urgent</string>
     <string name="text_completed">Completed</string>
     <string name="text_delete">Delete</string>
-
+    <string name="text_delete_success">Delete Item Successfully</string>
+    <string name="text_list_view">List View</string>
+    <string name="text_grid_view">Grid View</string>
+    <string name="text_save">Save</string>
+    <string name="text_update">Update</string>
+    <string name="error_title">Title shouldn\'t be empty</string>
+    <string name="error_save">Something went wrong</string>
+    <string name="success_save">Save successfully</string>
+    <string name="success_update">Update successfully</string>
 </resources>

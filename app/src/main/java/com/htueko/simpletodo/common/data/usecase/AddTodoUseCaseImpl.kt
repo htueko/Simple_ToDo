@@ -4,8 +4,8 @@ import com.htueko.simpletodo.common.domain.model.todo.Todo
 import com.htueko.simpletodo.common.domain.repository.TodoRepository
 import com.htueko.simpletodo.common.domain.usecase.AddTodoUseCase
 import com.htueko.simpletodo.common.util.State
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 class AddTodoUseCaseImpl @Inject constructor(
     private val repo: TodoRepository

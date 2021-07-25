@@ -6,13 +6,20 @@ import com.htueko.simpletodo.common.domain.datasource.RemoteDataSource
 import com.htueko.simpletodo.common.domain.executor.AppExecutor
 import com.htueko.simpletodo.common.domain.model.todo.Todo
 import com.htueko.simpletodo.common.util.State
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
+import javax.inject.Inject
 
+/**
+ * single source to data for remote operation
+ * @see [AppExecutor]
+ * @see [FirebaseFirestore]
+ * @see [RemoteDataSource]
+ */
 class RemoteDataSourceImpl @Inject constructor(
     private val taskExecutor: AppExecutor,
     private val instance: FirebaseFirestore
@@ -24,8 +31,11 @@ class RemoteDataSourceImpl @Inject constructor(
 
     override fun getTodo(): Flow<State<List<Todo>>> =
         flow<State<List<Todo>>> {
+            Timber.d("getTodo: called")
             val snapShot = firestore.get().await()
+            Timber.d("getTodo: ${snapShot.documents}")
             val data = snapShot.toObjects(Todo::class.java)
+            Timber.d("getTodo: data: $data")
             emit(State.success(data))
         }.flowOn(backGroundTask)
             .catch { emit(State.error(it.localizedMessage)) }
@@ -34,7 +44,7 @@ class RemoteDataSourceImpl @Inject constructor(
         flow<State<Todo>> {
             val snapShot = firestore.document(id.toString()).get().await()
             val data = snapShot.toObject(Todo::class.java)
-            if (data != null){
+            if (data != null) {
                 emit(State.success(data))
             }
         }.flowOn(backGroundTask)
@@ -47,14 +57,12 @@ class RemoteDataSourceImpl @Inject constructor(
         }.flowOn(backGroundTask)
             .catch { emit(State.error(it.localizedMessage)) }
 
-
     override fun removeToDo(todo: Todo): Flow<State<Boolean>> =
         flow<State<Boolean>> {
             firestore.document(todo.id.toString()).delete().await()
             emit(State.success(true))
         }.flowOn(backGroundTask)
             .catch { emit(State.error(it.localizedMessage)) }
-
 
     override fun updateToDo(todo: Todo): Flow<State<Boolean>> =
         flow<State<Boolean>> {
@@ -73,6 +81,4 @@ class RemoteDataSourceImpl @Inject constructor(
             emit(State.success(true))
         }.flowOn(backGroundTask)
             .catch { emit(State.error(it.localizedMessage)) }
-
-
 }

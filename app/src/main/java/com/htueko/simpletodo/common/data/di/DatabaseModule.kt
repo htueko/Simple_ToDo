@@ -30,5 +30,4 @@ internal object DatabaseModule {
     @Singleton
     @Provides
     fun provideTodoDao(db: TodoDatabase) = db.getTodoDao()
-
 }

@@ -9,7 +9,8 @@ import com.htueko.simpletodo.databinding.ItemListBinding
 
 class ListViewHolder(
     private val binding: ItemListBinding,
-    private val onCheckChangeListener: (Todo) -> Unit
+    private val onCheckChangeListener: (Todo) -> Unit,
+    private val onDeleteItemClickListener: (Todo) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(todo: Todo) {
         binding.apply {
@@ -29,6 +30,7 @@ class ListViewHolder(
             }
         }
         binding.chkCompleteList.setOnClickListener { onCheckChangeListener(todo) }
+        binding.imvDeleteList.setOnClickListener { onDeleteItemClickListener(todo) }
         binding.root.setOnClickListener {
             val action =
                 DashboardFragmentDirections.actionDashboardFragmentToDetailFragment(todo.id.toInt())
@@ -36,5 +38,4 @@ class ListViewHolder(
                 .navigate(action)
         }
     }
-
 }

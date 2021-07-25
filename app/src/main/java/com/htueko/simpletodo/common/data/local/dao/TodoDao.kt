@@ -9,6 +9,10 @@ import androidx.room.Update
 import com.htueko.simpletodo.common.data.local.entity.TodoEntity
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * data access object to perform sqlite operation
+ * @see [Dao]
+ */
 @Dao
 interface TodoDao {
 
@@ -26,5 +30,4 @@ interface TodoDao {
 
     @Query("select * from todo_table where id = :todoId")
     fun getTodoById(todoId: Long): Flow<TodoEntity>
-
 }

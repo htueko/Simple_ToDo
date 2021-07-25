@@ -1,7 +1,6 @@
 package com.htueko.simpletodo
 
 import android.app.Application
-import com.google.firebase.FirebaseApp
 import com.htueko.simpletodo.common.util.Logger
 import dagger.hilt.android.HiltAndroidApp
 
@@ -15,5 +14,4 @@ class SimpleTodoApp : Application() {
     private fun initLogger() {
         Logger.init()
     }
-
 }

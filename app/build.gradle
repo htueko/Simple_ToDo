@@ -45,6 +45,9 @@ tasks.dokkaHtml.configure {
 
 dependencies {
 
+    // desugaring
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
     implementation "androidx.core:core-ktx:$versions.coreKtx"
@@ -112,8 +115,7 @@ dependencies {
     implementation "com.google.firebase:firebase-storage-ktx:$versions.firebaseCloudStorageVersion"
 
     // Date Time
-    implementation "org.jetbrains.kotlinx:kotlinx-datetime:$versions.kotlinxDateTimeVersion"
-    implementation "com.jakewharton.threetenabp:threetenabp:$versions.threetenabpVersion"
+    implementation "io.fluidsonic.time:fluid-time:$versions.fluidTimeVersion"
 
     // unit test
     testImplementation "junit:junit:$versions.junitVersion"

@@ -20,6 +20,7 @@
         android:id="@+id/rv_dashboard"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#E4D7D7"
         app:layout_constraintBottom_toBottomOf="@id/root_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
